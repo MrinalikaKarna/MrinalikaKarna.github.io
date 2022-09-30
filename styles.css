@@ -6,15 +6,20 @@
     --very-light-gray: hsl(0, 0%, 95%);
 }
 
+html {
+    font-size: 15px;
+}
+
 body {
    display: flex;
    justify-content: center;
    align-items: center;
    height: auto;
+   background-color: var(--very-light-gray);
 }
 
 main {
-    width: min(90%, 375px);
+    width: min(90%, 100%);
     display: flex;
     flex-direction: column;
     margin: 5rem auto;
@@ -24,7 +29,7 @@ main {
 
 @media (min-width: 750px){
     body {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     main {
@@ -41,11 +46,12 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     flex-grow: 1;
+    padding: 1.5rem;
 }
 
-section>h1 {
+section>h2 {
     color: var(--very-light-gray);
     text-transform: uppercase;
     font-family: 'Big Shoulders Display', cursive;
@@ -56,9 +62,8 @@ section>p {
     font-family: 'Lexend Deca', sans-serif;
 }
 
-section>button {
+section>a {
     background-color: var(--very-light-gray);
-    border: none;
     padding: 0.5rem 1.5rem;
     border-radius: 1.5rem;
     font-family: 'Lexend Deca', sans-serif;
@@ -66,38 +71,35 @@ section>button {
     cursor: pointer;
 }
 
-section>img, section>button {
+section>img, section>a {
     align-self: flex-start;
 }
 
 section:first-child {
     background-color: var(--bright-orange);
-    padding: 1.5rem;
 }
 
-section:first-child > button{
+section:first-child > a{
     color: var(--bright-orange);
 }
 
 section:nth-child(2) {
     background-color: var(--dark-cyan);
-    padding: 1.5rem;
 }
 
-section:nth-child(2) > button{
+section:nth-child(2) > a{
     color: var(--dark-cyan);
 }
 
 section:nth-child(3) {
     background-color: var(--very-dark-cyan);
-    padding: 1.5rem;
 }
 
-section:nth-child(3) > button{
+section:nth-child(3) > a{
     color: var(--very-dark-cyan);
 }
 
-section>button:hover {
+section>a:hover {
     background-color: transparent;
     color: var(--very-light-gray);
     outline: solid 2px var(--very-light-gray);
