@@ -1,0 +1,104 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white : hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: auto;
+}
+
+main {
+    width: min(90%, 375px);
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+@media (min-width: 750px){
+    body {
+        height: 100vh;
+    }
+
+    main {
+     width: min(90%, 900px);
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: stretch;
+     border-radius: 1rem;
+     overflow: hidden;
+    }
+} 
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+section>h1 {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+section>p {
+    color: var(--transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+section>button {
+    background-color: var(--very-light-gray);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+section>img, section>button {
+    align-self: flex-start;
+}
+
+section:first-child {
+    background-color: var(--bright-orange);
+    padding: 1.5rem;
+}
+
+section:first-child > button{
+    color: var(--bright-orange);
+}
+
+section:nth-child(2) {
+    background-color: var(--dark-cyan);
+    padding: 1.5rem;
+}
+
+section:nth-child(2) > button{
+    color: var(--dark-cyan);
+}
+
+section:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+    padding: 1.5rem;
+}
+
+section:nth-child(3) > button{
+    color: var(--very-dark-cyan);
+}
+
+section>button:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    outline: solid 2px var(--very-light-gray);
+}
